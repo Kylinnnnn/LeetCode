@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>云音乐-播放页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="yunmusic.css" />
+    <script src="./id3.js"></script>
+</head>
+
+<body>
+    <div id="bg-img"></div>
+    <audio id="music" src="./music/Aperture Science Psychoacoustics Laboratory - Machiavellian Bach.mp3" onended="music_pause()"></audio>
+    <div id="top">
+        <img class="avater" id="user" src="images/visitor.png">
+        <div id="info">
+            <div id="song"></div>
+            <div id="singer"></div>
+        </div>
+        <img id="share" src="images/share.png">
+    </div>
+    <div id="content">
+        <div id="ink">
+            <img id="disk" src="images/aat.png">
+            <img id="album" src="images/MachiavellianBach.jpg">
+            <img id="stylus" src="images/ace.png">
+        </div>
+        <div id="con-footer">
+            <div id="t">
+                <img id="ab2" src="images/ab2.png">
+                <img id="aav" onclick="javascript:window.location.href='./Comment Page.html'" src="images/aav.png">
+                <img id="ab0" src="images/ab0.png">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./yunmusic.js"></script>
+    <div id="footer">
+        <div id="pro">
+            <div id="time_now"></div>
+            <div id="time_all"></div>
+            <div id="lines">
+                <div id="line1"></div>
+                <div id="line2"></div>
+            </div>
+
+        </div>
+        <div id="control">
+            <img id="last" src="images/aaj.png">
+            <img id="play" src="images/aai.png" onclick="music_play()" on-touch="music_play()">
+            <img id="pause" src="images/aag.png" onclick="music_pause()" on-touch="music_pause()">
+            <img id="next" src="images/aae.png">
+        </div>
+    </div>
+    <script type="text/javascript">
+        var tags = {};
+        id3('./music/Aperture Science Psychoacoustics Laboratory - Machiavellian Bach.mp3', function(e, t) {
+            tags = t;
+            console.log(tags.artist);
+        });
+        setTimeout("a()", 1000); //读取歌曲标签信息并存入tags中
+
+        function a() {
+            function ShowName() {
+                document.getElementById("singer").innerHTML = tags.artist;
+                document.getElementById("song").innerHTML = tags.title;
+            }
+            ShowName();
+            var time_now, time_all, min_now, sec_now, min_all, sec_all, timer, audio;
+            min_now = sec_now = 0;
+
+            function show_time() {
+                time_now = document.getElementById("time_now");
+                time_all = document.getElementById("time_all");
+                audio = document.getElementById("music");
+                sec_all = Math.floor(audio.duration) % 60;
+                min_all = Math.floor(Math.floor(audio.duration) / 60);
+                min_all = reFix(min_all);
+                sec_all = reFix(sec_all);
+                min_now = reFix(min_now);
+                sec_now = reFix(sec_now);
+                time_all.innerHTML = min_all + ':' + sec_all;
+                time_now.innerHTML = min_now + ':' + sec_now;
+            }
+            show_time();
+
+            function reFix(num) {
+                if (num < 10) num = '0' + num;
+                return num;
+            }
+        }
+    </script>
+</body>
+
+</html>

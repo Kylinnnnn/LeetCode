@@ -1,0 +1,257 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#bg-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(images/MachiavellianBach.jpg);
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(10px) brightness(40%);
+    -webkit-filter: blur(10px) brightness(40%);
+}
+
+#top {
+    border-bottom: 1px solid #708090;
+    height: 8%;
+    position: relative;
+}
+
+#content {
+    height: 75%;
+    position: relative;
+}
+
+#footer {
+    height: 17%;
+    position: relative;
+}
+
+.avater {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    float: left;
+    display: block;
+    margin: 5px;
+    margin-top: 3px;
+}
+
+#share {
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin-right: 25px;
+    margin-top: 5px;
+}
+
+#info {
+    margin: 5px;
+}
+
+#song {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+#singer {
+    font-size: 0.9em;
+    color: gray;
+}
+
+#ink {
+    position: relative;
+    height: 80%;
+}
+
+#disk {
+    z-index: 1;
+    height: 70%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+#album {
+    position: absolute;
+    display: table-cell;
+    border-radius: 100%;
+    z-index: 2;
+    height: 50%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+#stylus {
+    position: absolute;
+    height: 30%;
+    left: 0px;
+    right: 0px;
+    margin-left: 48%;
+    margin-right: auto;
+    top: -4%;
+    transform-origin: 18% 12%;
+    transform: rotate(-30deg);
+    z-index: 3;
+}
+
+#con-footer {
+    height: 20%;
+    position: relative;
+}
+
+#ab2 {
+    position: absolute;
+    height: 90px;
+    width: 100px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#aav {
+    position: absolute;
+    height: 90px;
+    width: 100px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+#ab0 {
+    position: absolute;
+    height: 90px;
+    width: 100px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#pro {
+    height: 20%;
+}
+
+#time_now {
+    position: absolute;
+    text-align: right;
+    color: aliceblue;
+    height: 20%;
+    width: 15%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#time_all {
+    position: absolute;
+    text-align: left;
+    color: aliceblue;
+    height: 20%;
+    width: 15%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#lines {
+    position: relative;
+    height: 100%;
+    width: 65%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-bottom-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+#line1 {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: gray;
+    z-index: 0;
+}
+
+#line2 {
+    position: absolute;
+    height: 2px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: red;
+    z-index: 1;
+}
+
+#control {
+    height: 80%;
+    position: relative;
+}
+
+#last {
+    position: absolute;
+    height: 100px;
+    left: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#play {
+    position: absolute;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    display: block;
+}
+
+#pause {
+    position: absolute;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    display: none;
+}
+
+#next {
+    position: absolute;
+    height: 100px;
+    right: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
